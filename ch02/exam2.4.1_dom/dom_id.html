@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function test()	{
+			var custName = document.getElementById("CustName");
+			var custAge = document.getElementById("CustAge");
+			console.log(custName);
+			console.log(custAge);
+			
+			var custNameName = custName.id;
+			var custAgeName = custAge.id;
+			var custNameValue = custName.value;
+			var custAgeValue = custAge.value;
+			console.log(custNameName + ":" + custNameValue);
+			console.log(custAgeName + ":" + custAgeValue);
+		}
+	</script>
+	</head>
+	<body>
+		<input type="text" id="CustName" size="20" value="홍길동" /><br>
+		<input type="text" id="CustAge" size="5" value="23" /><br>
+		<input type="button" id="btnSubmit" value="확인" onclick="javascript:test();" />
+	</body>
+</html>

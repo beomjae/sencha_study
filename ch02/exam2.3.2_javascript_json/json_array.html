@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		var tempJson = [{ name:'하니', id: 1234 ,
+			method: [{year:'1990', run:'fast', size:'small'},
+			{year:'1991', run:'fastest', size:'small'}]	},
+			{ name : '홍두깨', id : 4567 ,
+			method: [{year:'1990', run:'fast', size:'middle'},
+			{year:'1991', run:'fast', size:'big'}]}];
+		window.onload = function() {
+			console.log(tempJson)
+			console.log(JSON.stringify(tempJson));
+		}
+	</script>
+	</head>
+	<body>
+		<form>
+			JSON 테스트
+		</form>
+	</body>
+</html>
