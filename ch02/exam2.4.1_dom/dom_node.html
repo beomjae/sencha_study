@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function checkDom() {
+			var elementDiv1 = document.documentElement.getElementsByTagName("div")[0];
+			
+			console.log(elementDiv1);
+			console.log(elementDiv1.nodeName);
+			console.log("-------------------------------------");
+			console.log(elementDiv1.previousSibling);
+			console.log(elementDiv1.nextSibling);
+			console.log("-------------------------------------");
+			console.log(elementDiv1.childNodes);
+			console.log(elementDiv1.firstChild);
+			console.log(elementDiv1.lastChild);			
+		}
+	</script>
+	</head>
+	<body>
+		<form>
+			<div id="div1">
+				<input type="text" id="CustName1" size="20" value="홍길동" /><br>
+				<input type="text" id="CustAge1" size="5" value="23" /><br>
+			</div>
+			<div id="div2">
+				<input type="text" id="CustName2" size="20" value="임꺽정" /><br>
+				<input type="text" id="CustAge2" size="5" value="23" /><br>
+			</div>
+			<br>
+			<input type="button" id="btnSubmit" value="확인" onclick="javascript:checkDom();" />
+		</form>
+	</body>
+</html>
