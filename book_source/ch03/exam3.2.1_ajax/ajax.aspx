@@ -1,1 +1,0 @@
-<%=Request("custName") + ":" +  Request("custAge")%>

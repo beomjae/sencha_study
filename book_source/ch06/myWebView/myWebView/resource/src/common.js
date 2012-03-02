@@ -1,1 +1,0 @@
-var common_url = 'http://goodsencha.iptime.org:8080/book/part8_game';

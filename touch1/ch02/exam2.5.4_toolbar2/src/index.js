@@ -41,7 +41,7 @@ Ext.setup({
 							height:'40',
 							text:'<img src="./img/posol.png">'
 						}				
-					]					
+					]
 				},{
 					xtype:'toolbar',
 					dock:'left',

@@ -1,4 +1,0 @@
-function CallPhone(Jv_Input)
-{
-	window.native.CallPhone(Jv_Input);
-}
