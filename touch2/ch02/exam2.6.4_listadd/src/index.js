@@ -6,10 +6,14 @@ Ext.setup({
     icon: 'icon.png',
     glossOnIcon: false,
     onReady : function() {
-        Ext.regModel('friend', {
-            fields: ['write_time', 'friend_class', 'name', 'write']
-        });
-        
+    	
+		Ext.define('friend', {
+		     extend: 'Ext.data.Model',
+		     config: {
+		         fields: ['write_time', 'friend_class', 'name', 'write']
+		     }
+		 });
+    	
         var orgData= [{write_time: '09/20 11:11:11', name: '이병옥', write:'안녕하세요 오늘은 날씨가 덥네요' },
                       {write_time: '09/20 11:12:11', name: '최성민', write:'비가 온다네요'},
                       {write_time: '09/20 11:13:22', name: '이병옥', write:'날씨가 좋았으면 좋겠네'},
@@ -22,7 +26,7 @@ Ext.setup({
                       {write_time: '09/20 11:23:56', name: '이병옥', write:'늦은애들 회비 추가!!'},
                       {write_time: '09/20 11:24:00', name: '김나래', write:'그러게 어디 있어요..'}];
         
-        var store =   new Ext.data.Store({
+        var store =   Ext.create('Ext.data.Store',{
                 model: 'friend',
                 sorters: 'wirte_time',                
                 data: orgData,
@@ -31,7 +35,7 @@ Ext.setup({
             });             
 
 
-	   var friend_list = new Ext.List({
+	   var friend_list = Ext.create('Ext.List',{
 			name:'friend_list',
 			blockRefresh:true,
 			height:400,
@@ -41,12 +45,12 @@ Ext.setup({
                 handler: function(record, btn, index) {
                     alert('등급:' + record.get('write_time') + ' 구분:' + record.get('friend_class') + ' 이름:'  + record.get('name') + "에게 전화합니다. , index:" + index);
                 }
-            },			
+            },		
             store:store,
 
     	});
 
-        scrollList.panel = new Ext.Panel({
+        scrollList.panel = Ext.create('Ext.Panel', {
             fullscreen: true,
             html:'<BR><font size="2">리스트를 아래로 드래그 하면 데이타를 추가합니다.',
 
